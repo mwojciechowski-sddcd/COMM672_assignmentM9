@@ -49,6 +49,7 @@ header ul {
     list-style-type: none;
     display: flex;
     align-items: center;
+    margin: 0;
 }
 .button {
     background-color: #e6a563;
@@ -60,4 +61,24 @@ header ul {
 }
 nav li {
     margin: 0 1em;
+    position: relative;
+}
+
+.dropdown-content {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    gap: 20px;
+    padding: 10px 20px 20px 10px;
+    border-radius: 20px;
+    border: 1px solid #efefef;
+    background-color: #fff;
+    margin-top: 10px;
+    width: 120px;
+    display: none;
+    align-items: flex-start;
+}
+
+nav li:hover > .dropdown-content {
+    display: flex;
 }
