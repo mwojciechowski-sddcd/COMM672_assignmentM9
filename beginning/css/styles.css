@@ -43,7 +43,6 @@ header .container {
 header .container a:first-child {
     width: 250px;
     margin-right: auto;
-
 }
 header ul {
     list-style-type: none;
@@ -83,12 +82,23 @@ nav li:hover > .dropdown-content {
     display: flex;
 }
 
+.navToggler, .navTogglerMenu {
+    display: none;
+}
+
 @media only screen and (max-width: 767px) {
+
+    header div {
+        height: 120px;
+    }
+
     header nav {
+        padding-top: 30px;
         position: absolute;
         width: 100%;
         top: 90px;
         left: 0;
+        display: none;
     }
 
     header nav ul {
@@ -131,5 +141,21 @@ nav li:hover > .dropdown-content {
     .dropdown-content a {
         width: 100%;
         margin: auto;
+    }
+
+    .navToggler, .navTogglerMenu {
+        display: block;
+    }
+
+    .navTogglerMenu img {
+        width: 25px;
+    }
+
+    .navToggler, .menuClose, .navToggler:checked ~ .navTogglerMenu .menuOpen {
+        display: none;
+    }
+
+    .navToggler:checked ~ nav, .navToggler:checked ~ .navTogglerMenu .menuClose {
+        display: block;
     }
 }
